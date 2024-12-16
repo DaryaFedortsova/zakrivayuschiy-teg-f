@@ -18,7 +18,7 @@
   align-items: center;
   font-family: var(--main-font);
   font-size: var(--section-text);
-  font-weight: var(--font-normal);
+  font-variation-settings: "wght" var(--font-normal);
   background-image: var(--bg-line-bottom), var(--bg-line), var(--bg-gradient);
   background-attachment: fixed;
 }
@@ -64,6 +64,7 @@
 
 .card__title {
   font-size: inherit;
+  font-variation-settings: 'wght' var(--font-bold);
   padding: 5px 0 6px 10px;
 }
 
