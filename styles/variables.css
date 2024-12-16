@@ -1,1 +1,24 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --accent-font: 'PressStart2P', sans-serif;
+  --main-font: 'Inter-Variable', sans-serif;
+  --font-normal: 400;
+  --font-bold: 700;
+  --bg-button: #000;
+  --heart-dark: #000;
+  --heart-like: #ff0000;
+  --header-title-size: clamp(3.0625rem, 2.7768rem + 1.4286vw, 4.0625rem);
+  --header-subtitle-size: clamp(0.875rem, 0.7143rem + 0.8036vw, 1.4375rem);
+  --section-text: 18px;
+  --section-gap: 54px;
+  --header-padding: 103px;
+  --header-title-padding: clamp(119px, 30vw, 128px);
+  --line: 2px solid var(--bg-button);
+  --width: clamp(371px, 48.5vw, 696px);
+  --bg-gradient: linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+  --bg-line-bottom: repeating-linear-gradient(90deg, var(--bg-line-color), var(--bg-line-color) 2px, var(--transparent) 2px, var(--transparent) 4px);
+  --bg-line: repeating-linear-gradient(var(--bg-line-color), var(--bg-line-color) 2px, var(--transparent) 2px, var(--transparent) 4px);
+  --transparent: transparent;
+  --bg-line-color: #d3d3d3;
+  --bg-color: #fff;
+}
