@@ -34,6 +34,7 @@
   padding-block: var(--header-title-padding);
   align-items: center;
   inline-size: var(--width);
+  text-align: center;
 }
 
 .card-frame {
@@ -66,7 +67,7 @@
   padding: 5px 0 6px 10px;
 }
 
-@media (width <= 375px) {
+@media (width <= 400px) {
   .card__title {
     inline-size: 90%;
   }
@@ -87,10 +88,8 @@
   right: 25px;
   top: 28px;
   z-index: 1;
-  text-shadow: -1px 0 var(--bg-color), 
-  0 1px var(--bg-color), 
-  1px 0 var(--bg-color), 
-  0 -1px var(--bg-color);
+  text-shadow: -1px 0 var(--bg-color), 0 1px var(--bg-color),
+    1px 0 var(--bg-color), 0 -1px var(--bg-color);
   mix-blend-mode: hard-light;
   opacity: 0.5;
 }
@@ -102,10 +101,10 @@
   }
 }
 
-@supports((text-stroke: 1px var(--bg-color)) or (-webkit-text-stroke: 1px var(--bg-color))) {
+@supports (-webkit-text-stroke: 1px var(--bg-color)
+) {
   .label {
     -webkit-text-stroke: 1px var(--bg-color);
-    text-stroke: 1px var(--bg-color);
     text-shadow: none;
   }
 }
@@ -121,7 +120,11 @@
 .conteiner-text {
   padding: 27px 25px 25px;
   display: grid;
-  gap: 26px
+  gap: 26px;
+}
+
+.paragraph {
+  line-height: 117%;
 }
 
 .conteiner-button {
@@ -142,7 +145,7 @@
 }
 
 .button::after {
-  content: '';
+  content: "";
   background-color: var(--bg-button);
   inset: 0;
   position: absolute;
@@ -151,7 +154,7 @@
   transition: transform 0.5s ease-in-out;
 }
 
-.button:hover::after{
+.button:hover::after {
   transform: scaleX(1);
 }
 
@@ -175,7 +178,6 @@
   padding: 0;
   border: 2px solid transparent;
   background-color: transparent;
-  
 }
 
 .card__icon-button:focus {
@@ -204,7 +206,7 @@
   padding: 15px 21px 15px 19px;
 }
 
-.button-icon-save{
+.button-icon-save {
   width: 21px;
   position: relative;
   mix-blend-mode: difference;
@@ -212,7 +214,7 @@
 }
 
 @media (width <= 375px) {
-  .button-icon-save{
+  .button-icon-save {
     width: 28px;
     align-self: center;
   }
@@ -220,7 +222,7 @@
   .footer__button {
     display: flex;
     flex-direction: column;
-    gap:7px;
+    gap: 7px;
   }
 }
 
@@ -285,7 +287,7 @@
   filter: none;
 }
 
-.filter-third-sprint-start{
+.filter-third-sprint-start {
   filter: grayscale(50%);
 }
 
