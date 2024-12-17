@@ -64,7 +64,7 @@
 
 .card__title {
   font-size: inherit;
-  font-variation-settings: 'wght' var(--font-bold);
+  font-variation-settings: "wght" var(--font-bold);
   padding: 5px 0 6px 10px;
 }
 
@@ -102,8 +102,7 @@
   }
 }
 
-@supports (-webkit-text-stroke: 1px var(--bg-color)
-) {
+@supports (-webkit-text-stroke: 1px var(--bg-color)) {
   .label {
     -webkit-text-stroke: 1px var(--bg-color);
     text-shadow: none;
@@ -143,6 +142,7 @@
   position: relative;
   background-color: var(--bg-color);
   color: var(--bg-color);
+  transition: 0.3s linear;
 }
 
 .button::after {
@@ -165,7 +165,6 @@
 
 .button:focus-visible {
   box-shadow: 2px 2px 0 var(--bg-button);
-  transition: box-shadow 0.3s linear;
 }
 
 .button__text {
@@ -179,6 +178,7 @@
   padding: 0;
   border: 2px solid transparent;
   background-color: transparent;
+  transition: 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -187,7 +187,6 @@
 
 .card__icon-button:focus-visible {
   border: var(--line);
-  transition: 0.3s ease;
 }
 
 .like-icon {
@@ -198,13 +197,24 @@
   opacity: 0;
 }
 
-.footer {
-  padding: 52px 0 105px;
+.container-button-save {
+  margin: auto;
+  padding-block-end: 100px;
 }
 
-.footer__button {
+.button-save {
+  gap: 7px;
   inline-size: clamp(306px, 23.5vw, 335px);
-  padding: 15px 21px 15px 19px;
+  padding-block: 14.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (width <= 375px) {
+  .button-save {
+    flex-direction: column;
+  }
 }
 
 .button-icon-save {
@@ -228,8 +238,8 @@
 }
 
 .dialog[open] {
-  padding: 32px 30px 30px 28px;
-  inline-size: clamp(341px, 25vw, 353px);
+  padding: 32px 30px 28px 28px;
+  inline-size: clamp(341px, 25vw, 357px);
   display: grid;
   grid-template-columns: min-content 1fr;
   column-gap: 20px;
@@ -240,8 +250,8 @@
 
 @media (width <= 375px) {
   .dialog[open] {
-    padding: 31px 41px 34px 41px;
-    row-gap: 30px;
+    padding: 31px 41px 28px 40px;
+    row-gap: 28px;
   }
 }
 
@@ -264,34 +274,34 @@
   background-color: rgb(0 0 0 / 0.75);
 }
 
-.filter-zero-sprint-beginning {
+.filter-saturate {
   filter: saturate(150%);
 }
 
-.filter-first-sprint-start {
+.filter-contrast {
   filter: contrast(150%);
 }
 
-.filter-first-sprint-end {
+.filter-hue-rotate {
   filter: hue-rotate(0.8turn);
 }
 
-.filter-second-sprint-start {
+.filter-sepia {
   filter: sepia(0.7);
 }
 
-.filter-second-sprint-end {
+.filter-blur {
   filter: blur(30px);
 }
 
-.filter-second-sprint-end:hover {
+.filter-blur:hover {
   filter: none;
 }
 
-.filter-third-sprint-start {
+.filter-grayscale {
   filter: grayscale(50%);
 }
 
-.filter-i-am-here {
+.filter-multi {
   filter: contrast(140%) grayscale(70%) saturate(140%);
 }
